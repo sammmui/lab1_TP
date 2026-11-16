@@ -1,0 +1,1 @@
+while (X + 1) > Y do X := X * 2

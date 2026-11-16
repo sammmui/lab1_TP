@@ -1,0 +1,31 @@
+?start: stmt
+
+?stmt: "begin" stmt_list "end"               -> block
+     | IDENTIFIER ":=" aexp                  -> assign
+     | "if" bexp "then" stmt "else" stmt     -> if_stmt
+     | "while" bexp "do" stmt                -> while_stmt
+     | "skip"                                -> skip_stmt
+
+stmt_list: stmt (";" stmt)*
+
+?aexp: aexp "+" term  -> add
+     | aexp "-" term  -> sub
+     | term
+
+?term: term "*" factor -> mul
+     | term "/" factor -> div
+     | factor
+
+?factor: NUMBER       -> number
+       | IDENTIFIER   -> var
+       | "(" aexp ")"
+
+?bexp: aexp ">" aexp  -> gt
+     | aexp "<" aexp  -> lt
+     | aexp "==" aexp -> eq
+     | "(" bexp ")"
+
+%import common.CNAME -> IDENTIFIER
+%import common.SIGNED_NUMBER -> NUMBER
+%import common.WS
+%ignore WS
