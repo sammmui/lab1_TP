@@ -1,1 +1,1 @@
-while Y > 0 do Y := Y - 1
+begin Y := 2; while Y > 0 do Y := Y - 1 end
