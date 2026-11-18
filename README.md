@@ -3,3 +3,5 @@
 **Обрані завдання:** CORE-01, CORE-02, CORE-03, CORE-05, CORE-06, VIS-01, VIS-02, REL-01, REL-02, REL-03.
 
 **Очікувана кількість балів:** 10.0
+
+![CI Tests](https://github.com/sammmui/lab1_TP/actions/workflows/ci.yml/badge.svg)

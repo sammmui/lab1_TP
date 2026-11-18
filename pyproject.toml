@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sipl-interpreter"
+version = "1.0.0"
+description = "Парсер та інтерпретатор навчальної мови програмування SIPL"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "lark>=1.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
