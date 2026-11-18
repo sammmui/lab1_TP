@@ -1,0 +1,54 @@
+{
+  "node": "block",
+  "children": [
+    {
+      "node": "stmt_list",
+      "children": [
+        {
+          "node": "assign",
+          "children": [
+            {
+              "token": "IDENTIFIER",
+              "value": "X",
+              "line": 1,
+              "col": 7
+            },
+            {
+              "node": "number",
+              "children": [
+                {
+                  "token": "NUMBER",
+                  "value": "1",
+                  "line": 1,
+                  "col": 12
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "node": "assign",
+          "children": [
+            {
+              "token": "IDENTIFIER",
+              "value": "Y",
+              "line": 1,
+              "col": 15
+            },
+            {
+              "node": "number",
+              "children": [
+                {
+                  "token": "NUMBER",
+                  "value": "2",
+                  "line": 1,
+                  "col": 20
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

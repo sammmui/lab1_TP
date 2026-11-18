@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Parse Tree vs AST</title></head>
+<body style="display:flex; font-family:monospace; margin:0; height:100vh;">
+    <div style="flex:1; padding:20px; overflow:auto; border-right:2px solid #ccc;">
+        <h2>Parse Tree (Конкретний синтаксис)</h2>
+        <pre>{
+  "node": "block",
+  "children": [
+    {
+      "node": "stmt_list",
+      "children": [
+        {
+          "node": "assign",
+          "children": [
+            {
+              "token": "IDENTIFIER",
+              "value": "X",
+              "line": 1,
+              "col": 7
+            },
+            {
+              "node": "number",
+              "children": [
+                {
+                  "token": "NUMBER",
+                  "value": "1",
+                  "line": 1,
+                  "col": 12
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "node": "assign",
+          "children": [
+            {
+              "token": "IDENTIFIER",
+              "value": "Y",
+              "line": 1,
+              "col": 15
+            },
+            {
+              "node": "number",
+              "children": [
+                {
+                  "token": "NUMBER",
+                  "value": "2",
+                  "line": 1,
+                  "col": 20
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</pre>
+    </div>
+    <div style="flex:1; padding:20px; overflow:auto; background:#f4f9f4;">
+        <h2>AST (Абстрактний синтаксис)</h2>
+        <pre>{
+  "AST_Node": "Block",
+  "statements": [
+    {
+      "AST_Node": "Assign",
+      "source_position": "Line 1, Col 7",
+      "var_name": "X",
+      "expr": {
+        "AST_Node": "Number",
+        "source_position": "Line 1, Col 12",
+        "value": 1
+      }
+    },
+    {
+      "AST_Node": "Assign",
+      "source_position": "Line 1, Col 15",
+      "var_name": "Y",
+      "expr": {
+        "AST_Node": "Number",
+        "source_position": "Line 1, Col 20",
+        "value": 2
+      }
+    }
+  ]
+}</pre>
+    </div>
+</body></html>

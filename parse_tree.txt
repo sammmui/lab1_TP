@@ -1,0 +1,8 @@
+block
+  stmt_list
+    assign
+      X
+      number	1
+    assign
+      Y
+      number	2

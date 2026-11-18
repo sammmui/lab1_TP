@@ -1,1 +1,1 @@
-begin X := 1; Y := 1; if X == Y then begin X := 0; Y := 0 end else skip end
+begin X := 1; Y := 10; while X < Y do X := X * 2 end
